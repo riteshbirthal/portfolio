@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="image-wrapper">
             <img 
-              src="/profile.jpg" 
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Ritesh Birthal"
             />
           </div>
