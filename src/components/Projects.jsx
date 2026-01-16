@@ -2,6 +2,15 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const projects = [
   {
+    title: 'ASCIIer',
+    badge: 'Full Stack',
+    description: 'Transform images and videos into ASCII art. Real-time conversion with customizable character width (60-420), ASCII text download, side-by-side comparison, and file cleanup management. Supports multiple formats.',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop',
+    tags: ['React', 'Express', 'Sharp', 'FFmpeg', 'Multer'],
+    github: 'https://github.com/riteshbirthal/asciier',
+    live: 'https://asciier.vercel.app/',
+  },
+  {
     title: 'FlowForge',
     badge: 'Full Stack',
     description: 'Visual pipeline builder for creating node-based workflows. Features 9 node types, drag-and-drop interface, dynamic text node with variable detection, DAG validation, and localStorage persistence.',
