@@ -1,4 +1,6 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import React, {useState} from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+
 
 const projects = [
   {
@@ -11,6 +13,15 @@ const projects = [
     live: 'https://asciier.vercel.app/',
   },
   {
+    title: 'AI Quote Generator',
+    badge: 'AI/ML',
+    description: 'Automated YouTube Shorts generator using Google Gemini AI. Creates motivational quote reels with AI-generated quotes, text-to-speech voiceover, and background music.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+    tags: ['Python', 'Gemini AI', 'FFmpeg', 'Docker'],
+    github: 'https://github.com/riteshbirthal/AI-Quote-Generator',
+    live: null,
+  },
+  {
     title: 'FlowForge',
     badge: 'Full Stack',
     description: 'Visual pipeline builder for creating node-based workflows. Features 9 node types, drag-and-drop interface, dynamic text node with variable detection, DAG validation, and localStorage persistence.',
@@ -18,6 +29,15 @@ const projects = [
     tags: ['React', 'ReactFlow', 'FastAPI', 'Zustand'],
     github: 'https://github.com/riteshbirthal/FlowForge',
     live: 'https://flowforge-pipeline-builder.onrender.com/',
+  },
+  {
+    title: 'FestWish',
+    badge: 'Full Stack',
+    description: 'A lightweight web application that allows users to create and share personalized festival wishes using dynamic URLs. It focuses on simplicity, fast loading, and shareability.',
+    image: 'https://images.unsplash.com/photo-1585607344893-43a4bd91169a?w=600&h=400&fit=crop',
+    tags: ['FastAPI', 'ReactJS', 'PostgreSQL'],
+    github: 'https://github.com/riteshbirthal/FestWish',
+    live: 'https://festwish.onrender.com/',
   },
   {
     title: 'Mock Mitra',
@@ -38,15 +58,6 @@ const projects = [
     live: 'https://multiplayer-sudoku-n9bt.onrender.com/',
   },
   {
-    title: 'AI Quote Reel Bot',
-    badge: 'AI/ML',
-    description: 'Automated YouTube Shorts generator using Google Gemini AI. Creates motivational quote reels with AI-generated quotes, text-to-speech voiceover, and background music.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-    tags: ['Python', 'Gemini AI', 'FFmpeg', 'Docker'],
-    github: 'https://github.com/riteshbirthal/AI-Quote-Generator',
-    live: null,
-  },
-  {
     title: 'NightDrift',
     badge: 'Frontend',
     description: 'Hypnotic spiral visualization web app for sleep induction and relaxation. Features procedurally generated SVG/Canvas patterns with exponential spirals, safe animations, and customizable controls.',
@@ -54,6 +65,24 @@ const projects = [
     tags: ['React', 'TypeScript', 'Canvas', 'SVG', 'Vite'],
     github: 'https://github.com/riteshbirthal/NightDrift',
     live: "https://night-drift.vercel.app/",
+  },
+  {
+    title: 'Advent of Code Solutions',
+    badge: 'Full Stack',
+    description: 'A collection of solutions for Advent of Code, focusing on problem-solving, algorithmic thinking, and efficient code design. This project demonstrates consistency, logic building, and real-world problem decomposition.',
+    image: 'https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=600&h=400&fit=crop',
+    tags: ['Python', 'FastAPI'],
+    github: 'https://github.com/riteshbirthal/advent_of_code',
+    live: 'https://advent-of-code-xax0.onrender.com',
+  },
+  {
+    title: 'System Design',
+    badge: 'Full Stack',
+    description: 'A structured repository covering core system design concepts, patterns, and architectural principles. This project reflects preparation for backend, platform, and scalable system interviews.',
+    image: 'https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=600&h=400&fit=crop',
+    tags: ['FastAPI', 'React', 'MongoDB'],
+    github: 'https://github.com/riteshbirthal/system-design',
+    live: 'https://system-design-bs.onrender.com/',
   },
   {
     title: 'Data Traceability Platform',
@@ -85,6 +114,10 @@ const projects = [
 ]
 
 const Projects = () => {
+  const VISIBLE_COUNT = 6;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const visibleProjects = isExpanded ? projects : projects.slice(0, VISIBLE_COUNT);
+
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -94,7 +127,7 @@ const Projects = () => {
         </p>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <div key={index} className="project-card">
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
@@ -127,6 +160,16 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      {projects.length > VISIBLE_COUNT && (
+        <div className="view-more-wrapper">
+          <button
+            className="view-more-btn"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded ? "Show Less ↑" : "View More Projects ↓"}
+          </button>
+        </div>
+      )}
     </section>
   )
 }

@@ -37,7 +37,7 @@ const extraCurriculars = [
   {
     icon: <FaBook />,
     title: 'GFG 160 Days Challenge',
-    description: "Completed GeeksforGeeks' 22-week \"160 Days of Problem Solving\" course, strengthening proficiency in data structures, algorithms, and complex coding challenges.",
+    description: "Completed GeeksforGeeks' 22-week \"160 Days of Problem Solving\" program and \"100 Days of Interview Puzzles - Skill Up\", building strong proficiency in DSA, logical reasoning, and analytical problem-solving.",
     stats: ['22 Weeks', '160 Days', 'DSA Mastery'],
   },
 ]

@@ -527,6 +527,26 @@ section {
   font-weight: 500;
 }
 
+.view-more-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.view-more-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 0.75rem 1.75rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
 /* Experience Section */
 .experience {
   background: var(--bg-primary);
