@@ -1,5 +1,20 @@
 const experiences = [
   {
+    role: 'AI Engineer',
+    company: 'Gainwell Technologies',
+    period: 'Mar 2026 - Present',
+    description: [
+      'Designed and developed AI-based solutions to solve business problems using machine learning and deep learning techniques',
+      'Implemented APIs or services to integrate AI models into applications (using frameworks like FastAPI/Flask)',
+      'Collaborated with cross-functional teams to understand requirements and translate them into AI-driven solutions',
+      'Conducted data preprocessing, feature engineering, and model training to build accurate and efficient AI models',
+      'Optimized AI models for performance and scalability, ensuring they can handle large volumes of data and traffic',
+      'Stayed updated with the latest advancements in AI technologies and applied them to enhance existing solutions',
+    ],
+    tech: ['Python', 'GCP', 'AWS', 'Docker', 'PostgreSQL'],
+    logo: 'https://ui-avatars.com/api/?name=GW&background=3939ff&color=00ff00&size=60',
+  },
+  {
     role: 'Software Engineer',
     company: 'Carelon Global Solutions',
     period: 'Jul 2023 - Oct 2025',

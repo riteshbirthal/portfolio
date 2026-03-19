@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="hero-text">
           <p className="hero-greeting">Hello, I'm</p>
           <h1 className="hero-name">Ritesh Birthal</h1>
-          <h2 className="hero-title">Software Engineer | Ex-Carelon Global Solutions</h2>
+          <h2 className="hero-title">AI Engineer at Gainwell Technologies | Ex-Carelon Global Solutions</h2>
           <p className="hero-description">
             Software Engineer with 2+ years of experience building scalable, high-performance 
             systems. Specializing in FastAPI microservices, Kafka-driven data pipelines, 
