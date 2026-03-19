@@ -7,11 +7,9 @@ const Hero = () => {
         <div className="hero-text">
           <p className="hero-greeting">Hello, I'm</p>
           <h1 className="hero-name">Ritesh Birthal</h1>
-          <h2 className="hero-title">AI Engineer at Gainwell Technologies | Ex-Carelon Global Solutions</h2>
+          <h2 className="hero-title">AI Engineer @ Gainwell Technologies</h2>
           <p className="hero-description">
-            Software Engineer with 2+ years of experience building scalable, high-performance 
-            systems. Specializing in FastAPI microservices, Kafka-driven data pipelines, 
-            and cloud-native applications on GCP. BS-MS in Physics from IIT Kanpur.
+            AI Engineer with 2+ years of experience building scalable systems and AI-driven applications. Experienced in designing and deploying machine learning solutions, integrated with FastAPI microservices and Kafka-based data pipelines on GCP. Skilled in bridging backend engineering with AI/ML workflows, ensuring scalable and production-ready systems.
           </p>
           
           <div className="hero-buttons">
